@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+
+    <body ng-app="angularApp" ng-controller="angularController">
+        <button ng-click="logout()" ng-show="userInfo.isAuthenticated">Logout</button>
+        <button ng-click="login()" ng-hide="userInfo.isAuthenticated">Login</button>
+        <br/>
+        <pre>
+            Authenticated as ..
+            {{userInfo}}
+        </pre>
+        <hr/>
+
+        <button ng-click="runCommand()">Run Command</button>
+        <br/> Return Value: {{ returnValue }}
+        <br/>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+        <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.15/js/adal.min.js"></script>
+        <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.15/js/adal-angular.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+
+    </html>
